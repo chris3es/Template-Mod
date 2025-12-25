@@ -1,0 +1,11 @@
+modLoader="javafml"
+loaderVersion="[6,)" # ForgeGradle 6 / Forge 1.21.x
+license="MIT"
+
+[[mods]]
+modId="allforme"
+version="1.0.0"
+displayName="All For Me"
+description='''
+A minimal Forge 1.21.1 mod created from scratch using GitHub only.
+'''
