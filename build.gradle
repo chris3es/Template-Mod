@@ -3,9 +3,9 @@ plugins {
     id 'net.minecraftforge.gradle' version '6.0.+'
 }
 
-group = "com.chris"
+group = "com.chris.allforme"
 version = "1.0.0"
-archivesBaseName = "Template"
+archivesBaseName = "allforme"
 
 java {
     toolchain {
@@ -14,13 +14,22 @@ java {
 }
 
 minecraft {
+    // Official Mojang mappings for 1.21.1
     mappings channel: 'official', version: '1.21.1'
 }
 
+repositories {
+    mavenCentral()
+    maven {
+        name = "Forge"
+        url = "https://maven.minecraftforge.net/"
+    }
+}
+
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.21.1-52.1.8' // Replace with actual Forge version
+    minecraft "net.minecraftforge:forge:1.21.1-52.1.8"
 }
 
 tasks.withType(JavaCompile).configureEach {
-    options.encoding = 'UTF-8'
+    options.encoding = "UTF-8"
 }
